@@ -1,0 +1,341 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>현석·유진 아기 산후조리원</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{--bg:#eef9ff;--bg2:#fff7fb;--card:#ffffff;--ink:#2b3a55;--mute:#6b7a90;--line:#d7e9f5;--blue:#4aa8d8;--pink:#ff8fb1;--yellow:#ffd36e;--mint:#5cc8a8;--red:#e0566f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1d2b;--bg2:#1a1626;--card:#172636;--ink:#e6f0fa;--mute:#9fb0c4;--line:#29405a;--blue:#6cc0ec;--pink:#ff9fbd;--yellow:#f3c65c;--mint:#6fd6b7;--red:#ff7b91}}
+:root[data-theme="dark"]{--bg:#0f1d2b;--bg2:#1a1626;--card:#172636;--ink:#e6f0fa;--mute:#9fb0c4;--line:#29405a;--blue:#6cc0ec;--pink:#ff9fbd;--yellow:#f3c65c;--mint:#6fd6b7;--red:#ff7b91}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%) fixed;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#bfe8ff 0%,#9ad6f2 70%,#7cc4e8 100%);color:#21324d;padding:28px 16px 70px;text-align:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(180deg,#1d4466 0%,#1a3b5a 70%,#163450 100%);color:#e6f0fa}}
+.hero h1{font-size:clamp(22px,6vw,32px);margin:6px 0 4px;letter-spacing:-.5px}
+.hero p{margin:0;opacity:.85}
+.shark{width:150px;height:auto;animation:swim 4s ease-in-out infinite}
+@keyframes swim{0%,100%{transform:translate(-6px,0) rotate(-2deg)}50%{transform:translate(6px,-6px) rotate(2deg)}}
+.bub{position:absolute;bottom:-20px;border-radius:50%;background:rgba(255,255,255,.55);animation:up linear infinite}
+@keyframes up{to{transform:translateY(-420px);opacity:0}}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:46px}
+.baby{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:18px;margin:0 0 22px;position:relative;box-shadow:0 8px 24px rgba(74,168,216,.15)}
+.memo{background:#fff4d6;border:2px solid #ffd36e;border-radius:22px;padding:16px 18px;margin:-40px 0 16px;position:relative;box-shadow:0 8px 24px rgba(255,180,0,.15)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .memo{background:#3a3220;border-color:#7a6327}}
+.memo h2{margin:0 0 4px;font-size:19px} .who{display:flex;gap:14px;margin:8px 0 6px;font-size:15px}
+.memo textarea{width:100%;font:inherit;padding:10px 12px;border-radius:14px;border:1.5px solid #ffd36e;background:var(--card);color:var(--ink);resize:vertical}
+.mrow{display:flex;align-items:center;gap:10px;margin-top:8px}
+.mlist{list-style:none;padding:0;margin:12px 0 0} .mlist li{background:var(--card);border-radius:12px;padding:8px 12px;margin:0 0 6px;font-size:14.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.mlist .mw{font-weight:700;color:var(--pink)} .mdel{font:inherit;font-size:12px;border:0;background:none;color:var(--mute);text-decoration:underline;cursor:pointer;margin-left:4px} .mlist .mt{font-size:12px;color:var(--mute);margin-left:6px}
+.baby h2{margin:0 0 10px;font-size:19px}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bgrid div{background:var(--bg);border-radius:14px;padding:10px;text-align:center}
+.bgrid span{display:block;font-size:12.5px;color:var(--mute)} .bgrid b{font-size:20px}
+.prog{height:14px;background:var(--bg);border-radius:9px;margin:14px 0 4px;overflow:hidden}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--yellow));border-radius:9px}
+.heart{margin-top:10px;font-weight:600} .heart em{font-style:normal;display:inline-block;animation:beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}30%{transform:scale(1.25)}}
+h2.sec{font-size:20px;margin:30px 0 6px} .sub{color:var(--mute);margin:0 0 14px;font-size:14.5px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px;margin:0 0 14px;transition:box-shadow .2s}
+.card.hl{box-shadow:0 0 0 3px var(--pink)}
+.top{display:flex;gap:12px;align-items:flex-start}
+.rk{flex:none;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;font-size:17px}
+.card:nth-of-type(1) .rk{background:#f5b400} .card:nth-of-type(2) .rk{background:#a9b4c2} .card:nth-of-type(3) .rk{background:#d08b4d}
+.ttl{flex:1;min-width:0} .ttl h3{margin:2px 0 0;font-size:17.5px} .addr{font-size:13px;color:var(--mute)}
+.tot{text-align:right} .tot b{font-size:26px;color:var(--pink)} .tot small{color:var(--mute)}
+.badge{display:inline-block;margin-top:5px;font-size:12.5px;padding:2px 9px;border-radius:20px} .att{background:#ffe3ec;color:#b03a62}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
+.facts div{background:var(--bg);border-radius:12px;padding:8px 10px;min-width:0}
+.facts span{display:block;font-size:12px;color:var(--mute)} .facts b{font-size:16px} .facts small{display:block;font-size:12px;color:var(--mute);overflow-wrap:anywhere}
+.facts a{color:var(--blue)}
+.bar{display:flex;align-items:center;gap:8px;font-size:13px;margin:4px 0} .bl{width:76px;color:var(--mute)}
+.bt{flex:1;height:9px;background:var(--bg);border-radius:6px;overflow:hidden} .bt i{display:block;height:100%;border-radius:6px}
+.c1{background:var(--pink)} .c2{background:var(--blue)} .c3{background:var(--mint)} .bar b{width:30px;text-align:right}
+.tags{margin:10px 0 4px} .tag{display:inline-block;font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin:0 5px 5px 0} .tag small{color:var(--mute)}
+details{margin:6px 0} summary{cursor:pointer;color:var(--red);font-size:14px;font-weight:600}
+.neg{padding-left:18px;font-size:13.5px} .neg li{margin:4px 0} .nr{color:var(--red);font-weight:700} .tiny{font-size:12px;color:var(--mute);margin:2px 0}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.btn{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:12px;border:0;background:var(--blue);color:#fff;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.leaflet-tile-pane{filter:saturate(.75) brightness(1.04)}
+#map{height:430px;border-radius:20px;border:2px solid var(--line);z-index:0}
+.pin{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:grid;place-items:center;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.pin b{transform:rotate(45deg);color:#fff;font-size:12px}
+.hpin{font-size:20px;line-height:1} .legend{font-size:13px;color:var(--mute);margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);border-radius:14px;overflow:hidden}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left} th{background:var(--bg);font-weight:600} td a{color:var(--blue)}
+.how{background:var(--card);border:2px dashed var(--line);border-radius:18px;padding:14px 16px;font-size:14px}
+.how h3{margin:4px 0 6px;font-size:16px} .how ul{padding-left:18px;margin:4px 0}
+footer{font-size:12px;color:var(--mute);margin-top:26px}
+.tw{overflow-x:auto}
+</style></head><body>
+<header class="hero">
+ <span class="bub" style="left:8%;width:10px;height:10px;animation-duration:7s;animation-delay:0s"></span><span class="bub" style="left:18%;width:16px;height:16px;animation-duration:9s;animation-delay:2s"></span><span class="bub" style="left:30%;width:8px;height:8px;animation-duration:6s;animation-delay:1s"></span><span class="bub" style="left:55%;width:12px;height:12px;animation-duration:8s;animation-delay:3s"></span><span class="bub" style="left:70%;width:18px;height:18px;animation-duration:10s;animation-delay:0.5s"></span><span class="bub" style="left:84%;width:9px;height:9px;animation-duration:7s;animation-delay:4s"></span><span class="bub" style="left:92%;width:14px;height:14px;animation-duration:9s;animation-delay:1.5s"></span>
+ <svg class="shark" viewBox="0 0 220 130" aria-hidden="true">
+ <path d="M18 70 L2 40 Q22 52 34 62 Z" fill="#7cc4e8"/><path d="M18 72 L4 104 Q24 90 36 78 Z" fill="#7cc4e8"/>
+ <path d="M95 30 Q112 2 128 28 Z" fill="#7cc4e8"/>
+ <ellipse cx="110" cy="72" rx="86" ry="44" fill="#9ad6f2"/>
+ <path d="M42 84 Q110 132 190 80 Q160 108 110 110 Q66 110 42 84Z" fill="#fff"/>
+ <path d="M120 96 Q132 120 104 112 Z" fill="#7cc4e8"/>
+ <circle cx="156" cy="60" r="9" fill="#2b3a55"/><circle cx="159" cy="57" r="3" fill="#fff"/>
+ <ellipse cx="150" cy="80" rx="9" ry="5" fill="#ffb3c7" opacity=".8"/>
+ <path d="M170 82 Q180 90 190 80" stroke="#2b3a55" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M86 58 q4 8 0 16 M96 56 q4 9 0 18" stroke="#7cc4e8" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
+ <h1>현석 · 유진 아기 산후조리원 선택</h1>
+ <p>뚜루루뚜루 🦈 우리 아기가 쉬어 갈 바다를 찾고 있어요</p>
+ <svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none"><path d="M0 22 Q150 0 300 22 T600 22 T900 22 T1200 22 V46 H0Z" fill="var(--bg)"/></svg>
+</header>
+<main class="wrap">
+<section class="memo">
+ <h2>💌 현석, 유진가 하고싶은 말</h2>
+ <p class="tiny">궁금한 점, 더 찾아봤으면 하는 조리원, 바뀐 조건(예산·위치·병원)을 적어 주세요. “남기기”는 이 휴대폰에 저장되고, “형한테 보내기”를 누르면 카카오톡 등으로 형(현제)에게 보낼 수 있어요.</p>
+ <div class="who"><label><input type="radio" name="who" value="현석" checked> 현석</label><label><input type="radio" name="who" value="유진"> 유진</label></div>
+ <textarea id="memoT" rows="3" maxlength="2000" placeholder="예) 유성선병원 근처 조리원도 더 찾아봐 줘"></textarea>
+ <div class="mrow"><button class="btn" id="memoB" type="button">남기기</button><button class="btn ghost" id="memoS" type="button">형한테 보내기 💬</button></div>
+ <div id="memoM" class="tiny"></div>
+ <ul id="memoL" class="mlist"></ul>
+</section>
+<section class="baby">
+ <h2>👶 우리 아기</h2>
+ <div class="bgrid">
+  <div><span>출산 예정일</span><b>2027.6.10</b></div>
+  <div><span>오늘은</span><b id="ga">-</b></div>
+  <div><span>만나기까지</span><b id="dday">-</b></div>
+ </div>
+ <div class="prog"><i id="pg" style="width:0"></i></div>
+ <div class="tiny" id="pgt"></div>
+ <div class="heart"><em>💓</em> 7주차에 심장이 잘 뛰고 있다는 소식을 들었어요 (2026.10.26)</div>
+</section>
+
+<h2 class="sec">🏆 산후조리원 추천 순위</h2>
+<p class="sub">대전 산후조리원 10곳(네이버 지도에 등록된 전부)의 방문자 후기 594개를 모두 읽고 점수를 매겼어요. 후기 45% · 분만병원과 가까운 정도 30% · 대전 서구에서 가까운 정도 25%.</p>
+
+<article class="card" id="p1276739692" data-id="1276739692">
+  <div class="top"><div class="rk">1</div>
+    <div class="ttl"><h3>모태산후조리원</h3><div class="addr">대전 서구 대덕대로 191 3층, 5층</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>8.8</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 5.00</b><small>후기 65개 · 별점 남긴 사람 1명</small></div>
+    <div><span>나쁜 후기</span><b>2%</b><small>1개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>9 m</b><small><a href="https://m.place.naver.com/place/11559838/home" target="_blank" rel="noopener">모태산부인과의원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>813 m</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:76%"></i></span><b>7.6</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:95%"></i></span><b>9.5</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>43</small></span><span class="tag">아기 케어를 잘해줘요 <small>38</small></span><span class="tag">친절해요 <small>30</small></span><span class="tag">위생적으로 케어해줘요 <small>19</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr"></span> “이 산부인과 카운터에 있는 사람들 진짜 불친절함” <small>(불친절)</small></li><li><span class="nr"></span> “친절하고 모유수유생각있다면 모태산후조리원을 추천한다. 모유수유에 진심이고 강요는 안하심. 한다고 하면 적극도와주심 가슴아파서 잠못잘때 셀프마사지…” <small>(아쉬, 시끄)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1276739692/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1276739692/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="http://www.motaesanhu.com" target="_blank" rel="noopener">홈페이지</a><button class="btn ghost" data-fly="1276739692">지도에서 보기</button></div>
+</article>
+<article class="card" id="p33082738" data-id="33082738">
+  <div class="top"><div class="rk">2</div>
+    <div class="ttl"><h3>라온산후조리원</h3><div class="addr">대전 동구 동서대로1683번길 33-11</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>8.7</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.90</b><small>후기 224개 · 별점 남긴 사람 86명</small></div>
+    <div><span>나쁜 후기</span><b>1%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>88 m</b><small><a href="https://m.place.naver.com/place/33331633/home" target="_blank" rel="noopener">라온산부인과의원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>4.7 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:88%"></i></span><b>8.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:69%"></i></span><b>6.9</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>199</small></span><span class="tag">아기 케어를 잘해줘요 <small>191</small></span><span class="tag">위생적으로 케어해줘요 <small>132</small></span><span class="tag">식사가 맛있어요 <small>91</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr">★5</span> “첫째 낳고 만족스럽게 이용했던 곳이라서 둘째도 고민없이 이용했구요~여전히 시설도 깔끔하고 선생님들도 친절하시구 아기케어도 잘해주시구 밥도 맛있어…” <small>(아쉬)</small></li><li><span class="nr"></span> “임신사실을 알고 바로 예약한 조리원!! 우선 남편 출퇴근가능! 아가돌보는 선생님들께 궁금한거 물어보시면 자세히 알려주심!! 수유자세, 기저귀갈이…” <small>(별로)</small></li><li><span class="nr"></span> “밥 잘 나오고 시설 최신식이고 남편 출입가능한 부분이 좋아요 방 환풍기는 청소가 필요할 듯..먼지 많아 보여서 아쉬웠어요” <small>(아쉬)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/33082738/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/33082738/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="http://raonobgy.com/" target="_blank" rel="noopener">홈페이지</a><a class="btn" href="https://blog.naver.com/raonobgy1" target="_blank" rel="noopener">블로그</a><button class="btn ghost" data-fly="33082738">지도에서 보기</button></div>
+</article>
+<article class="card" id="p38729746" data-id="38729746">
+  <div class="top"><div class="rk">3</div>
+    <div class="ttl"><h3>서울여성병원제2산후조리원</h3><div class="addr">대전 서구 계룡로491번길 20</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>8.5</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.50</b><small>후기 29개 · 별점 남긴 사람 8명</small></div>
+    <div><span>나쁜 후기</span><b>3%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>60 m</b><small><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.1 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:70%"></i></span><b>7.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:93%"></i></span><b>9.3</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>9</small></span><span class="tag">아기 케어를 잘해줘요 <small>8</small></span><span class="tag">친절해요 <small>7</small></span><span class="tag">시설이 깔끔해요 <small>6</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr"></span> “두번째 이용할 때는 침구가 바뀌어 있어서 좋았어요 (낡은 산모복은 좀 아쉬워요🥲) 음식도 저한텐 괜찮았는데 지내다보면 질릴 순 있어요 산후체조나…” <small>(아쉬)</small></li><li><span class="nr"></span> “잘 있다 왔어요 밥이 맛있고 신생아실 선생님들 친절하세요. 코로나 때문에 보호자 출입이 안되서 좀 아쉬워요.” <small>(아쉬)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/38729746/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/38729746/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="38729746">지도에서 보기</button></div>
+</article>
+<article class="card" id="p1788970414" data-id="1788970414">
+  <div class="top"><div class="rk">4</div>
+    <div class="ttl"><h3>미즈제일산후조리원</h3><div class="addr">대전 유성구 계룡로 126</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>8.4</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.80</b><small>후기 32개 · 별점 남긴 사람 5명</small></div>
+    <div><span>나쁜 후기</span><b>2%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>14 m</b><small><a href="https://m.place.naver.com/place/1244956324/home" target="_blank" rel="noopener">미즈제일여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>3.6 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:79%"></i></span><b>7.9</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:76%"></i></span><b>7.6</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>19</small></span><span class="tag">아기 케어를 잘해줘요 <small>14</small></span><span class="tag">친절해요 <small>11</small></span><span class="tag">식사가 맛있어요 <small>8</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr"></span> “잘 쉬다 왔어용 비싸긴 하지만 편하고 좋아서 둘째 때도 또 가고싶어요~~~ 식사가 맛있어요” <small>(비싸)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1788970414/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1788970414/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="https://cafe.naver.com/mizjeilpcc" target="_blank" rel="noopener">카페</a><a class="btn" href="http://www.mizjeil.com/" target="_blank" rel="noopener">홈페이지</a><button class="btn ghost" data-fly="1788970414">지도에서 보기</button></div>
+</article>
+<article class="card" id="p183856246" data-id="183856246">
+  <div class="top"><div class="rk">5</div>
+    <div class="ttl"><h3>서울여성병원제1산후조리원</h3><div class="addr">대전 서구 문정로 7 신한일빌딩</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>8.1</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.32</b><small>후기 62개 · 별점 남긴 사람 11명</small></div>
+    <div><span>나쁜 후기</span><b>5%</b><small>2개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>10 m</b><small><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.2 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:62%"></i></span><b>6.2</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:92%"></i></span><b>9.2</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>40</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">친절해요 <small>17</small></span><span class="tag">병원 연계가 잘 돼있어요 <small>11</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr">★3</span> “ㄱㅆ” <small>(낮은 별점)</small></li><li><span class="nr">★4</span> “대전서울여성병원 1산후조리원 이용 후기입니다. 신생아실 선생님들께서 아기를 사랑으로 잘 돌봐주시고 친절하게 대해주셔서 감사했어요. 뷔페식으로 제…” <small>(벌레, 아쉬)</small></li><li><span class="nr"></span> “친절하기는 한데 직원들 마인드는 약간 돈벌이로 생각하는 가식적인 느낌도 있네요.. 밥은..가격대비 너무 비싸네요ㅜ” <small>(비싸)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/183856246/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/183856246/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="183856246">지도에서 보기</button></div>
+</article>
+<article class="card" id="p15963554" data-id="15963554">
+  <div class="top"><div class="rk">6</div>
+    <div class="ttl"><h3>가오플러스산후조리원</h3><div class="addr">대전 동구 은어송로 63</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>7.8</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.75</b><small>후기 29개 · 별점 남긴 사람 2명</small></div>
+    <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>11 m</b><small><a href="https://m.place.naver.com/place/11886847/home" target="_blank" rel="noopener">가오플러스산부인과의원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>8.4 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:83%"></i></span><b>8.3</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:44%"></i></span><b>4.4</b></div>
+  <div class="tags"><span class="tag">친절해요 <small>23</small></span><span class="tag">산모 케어를 잘해줘요 <small>13</small></span><span class="tag">시설이 깔끔해요 <small>12</small></span><span class="tag">아기 케어를 잘해줘요 <small>11</small></span></div>
+  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/15963554/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/15963554/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="15963554">지도에서 보기</button></div>
+</article>
+<article class="card" id="p1026717335" data-id="1026717335">
+  <div class="top"><div class="rk">7</div>
+    <div class="ttl"><h3>미즈여성병원부설산후조리원</h3><div class="addr">대전 서구 문정로2번길 95</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>7.8</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.46</b><small>후기 84개 · 별점 남긴 사람 24명</small></div>
+    <div><span>나쁜 후기</span><b>7%</b><small>5개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>11 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.4 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:57%"></i></span><b>5.7</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>51</small></span><span class="tag">친절해요 <small>46</small></span><span class="tag">아기 케어를 잘해줘요 <small>39</small></span><span class="tag">병원 연계가 잘 돼있어요 <small>29</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr">★3</span> “굿” <small>(낮은 별점)</small></li><li><span class="nr">★3</span> “굿” <small>(낮은 별점)</small></li><li><span class="nr"></span> “나쁘지않음. 생각보단 실망이었음..” <small>(실망)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1026717335/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1026717335/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1026717335">지도에서 보기</button></div>
+</article>
+<article class="card" id="p1818261448" data-id="1818261448">
+  <div class="top"><div class="rk">8</div>
+    <div class="ttl"><h3>더블유산후조리원</h3><div class="addr">대전 서구 문정로48번길 70</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>7.5</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 3.88</b><small>후기 69개 · 별점 남긴 사람 16명</small></div>
+    <div><span>나쁜 후기</span><b>6%</b><small>4개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>17 m</b><small><a href="https://m.place.naver.com/place/31267505/home" target="_blank" rel="noopener">더블유여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.3 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:50%"></i></span><b>5.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>45</small></span><span class="tag">친절해요 <small>33</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">위생적으로 케어해줘요 <small>22</small></span></div>
+  <details><summary>나쁜 후기 예시 보기</summary><ul class="neg"><li><span class="nr">★0.5</span> “처음 조리원 들어간 날 산모가 많았어서 신생아실 인력부족인지 필수 모자동실 시간에 대뜸 들어와서 기저귀가는거, 분유먹이는거 성의없이 후다닥 알려…” <small>(낮은 별점)</small></li><li><span class="nr">★0.5</span> “조리원 방 수전에서 녹가루가 나왔습니다. 병원 원무과장이라는 분이 전화하셨는데, 해줄게 없다 별일아니라고 하셨습니다. 여기 가시는 분들 알고 가…” <small>(낮은 별점)</small></li><li><span class="nr">★1</span> “조산으로 대학병원 출산 후 조리원 입소 전 코로나 검사 받으려고 2층으로 갔는데 최근에 새로온 직원분 엄청 불친절하고 환자에게 꼽주려는 의도가 …” <small>(불친절)</small></li></ul><p class="tiny">원문은 “후기 전체 보기”에서 확인하세요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1818261448/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1818261448/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="http://www.w-woman.co.kr/" target="_blank" rel="noopener">홈페이지</a><button class="btn ghost" data-fly="1818261448">지도에서 보기</button></div>
+</article><h2 class="sec">🫧 후기가 거의 없는 곳</h2><p class="sub">네이버 후기가 10개보다 적어서 순위를 매기기 어려워요. 점수는 참고만 하고, 관심 있으면 직접 상담해 보세요.</p>
+<article class="card" id="p16144214" data-id="16144214">
+  <div class="top"><div class="rk">9</div>
+    <div class="ttl"><h3>아랫목산후조리원</h3><div class="addr">대전 서구 계룡로553번길 18</div><span class="badge att">🏥 병원 부설·같은 건물</span></div>
+    <div class="tot"><b>7.9</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>별점 없음</b><small>후기 0개 · 별점 남긴 사람 0명</small></div>
+    <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>22 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.3 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:58%"></i></span><b>5.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
+  <div class="tags"></div>
+  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/16144214/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/16144214/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="16144214">지도에서 보기</button></div>
+</article>
+<article class="card" id="p33633784" data-id="33633784">
+  <div class="top"><div class="rk">10</div>
+    <div class="ttl"><h3>세란산후조리원</h3><div class="addr">대전 서구 문정로 88</div></div>
+    <div class="tot"><b>7.7</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>별점 없음</b><small>후기 0개 · 별점 남긴 사람 0명</small></div>
+    <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>472 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.1 km</b><small>직선거리</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:58%"></i></span><b>5.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:93%"></i></span><b>9.3</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:93%"></i></span><b>9.3</b></div>
+  <div class="tags"></div>
+  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/33633784/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/33633784/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="33633784">지도에서 보기</button></div>
+</article>
+
+<h2 class="sec">🗺️ 지도로 보기</h2>
+<p class="sub">숫자 핀은 조리원 순위, 🏥는 분만 병원, ⭐는 대전 서구청이에요. 위 목록의 “지도에서 보기”를 누르면 여기로 와요.</p>
+<div id="map"></div>
+<div class="legend">분홍 핀 = 병원과 같은 건물 · 파란 핀 = 따로 떨어진 조리원</div>
+
+<h2 class="sec">🏥 대전 분만 가능 병원 (심평원)</h2>
+<p class="sub">건강보험심사평가원 「분만가능 의료기관 목록」(2025.1~2026.4 실제 분만 청구 기준) 중 대전 15곳. 지금도 분만하는지는 꼭 전화로 확인하세요.</p>
+<div class="tw"><table><tr><th>병원</th><th>종류</th><th>구</th><th>야간</th><th>서구청에서</th></tr><tr><td><a href="https://m.place.naver.com/place/11686917/home" target="_blank" rel="noopener">대전을지대학교병원</a></td><td>종합병원</td><td>서구</td><td>야간 가능</td><td>151 m</td></tr><tr><td><a href="https://m.place.naver.com/place/11559838/home" target="_blank" rel="noopener">모태산부인과의원</a></td><td>의원</td><td>서구</td><td>야간 가능</td><td>811 m</td></tr><tr><td><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a></td><td>병원</td><td>서구</td><td>야간 가능</td><td>1.2 km</td></tr><tr><td><a href="https://m.place.naver.com/place/31267505/home" target="_blank" rel="noopener">더블유여성병원</a></td><td>병원</td><td>서구</td><td>야간 가능</td><td>1.3 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a></td><td>병원</td><td>서구</td><td>야간 가능</td><td>1.4 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11559131/home" target="_blank" rel="noopener">대전선병원</a></td><td>종합병원</td><td>중구</td><td>-</td><td>3.2 km</td></tr><tr><td><a href="https://m.place.naver.com/place/1244956324/home" target="_blank" rel="noopener">미즈제일여성병원</a></td><td>병원</td><td>유성구</td><td>야간 가능</td><td>3.6 km</td></tr><tr><td><a href="https://m.place.naver.com/place/33331633/home" target="_blank" rel="noopener">라온산부인과의원</a></td><td>의원</td><td>동구</td><td>야간 가능</td><td>4.7 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11480812/home" target="_blank" rel="noopener">대전한국병원</a></td><td>종합병원</td><td>동구</td><td>-</td><td>4.7 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11686910/home" target="_blank" rel="noopener">가톨릭대학교 대전성모병원</a></td><td>종합병원</td><td>중구</td><td>야간 가능</td><td>4.9 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11559175/home" target="_blank" rel="noopener">충남대학교병원</a></td><td>상급종합병원</td><td>중구</td><td>야간 가능</td><td>5.1 km</td></tr><tr><td><a href="https://m.place.naver.com/place/12911002/home" target="_blank" rel="noopener">유성선병원</a></td><td>종합병원</td><td>유성구</td><td>-</td><td>5.7 km</td></tr><tr><td><a href="https://m.place.naver.com/place/12131104/home" target="_blank" rel="noopener">건양대학교병원</a></td><td>상급종합병원</td><td>서구</td><td>야간 가능</td><td>6.6 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11868833/home" target="_blank" rel="noopener">예담산부인과의원</a></td><td>의원</td><td>서구</td><td>야간 가능</td><td>7.3 km</td></tr><tr><td><a href="https://m.place.naver.com/place/11886847/home" target="_blank" rel="noopener">가오플러스산부인과의원</a></td><td>의원</td><td>동구</td><td>야간 가능</td><td>8.4 km</td></tr></table></div>
+
+<h2 class="sec">🔎 점수는 이렇게 매겼어요</h2>
+<div class="how">
+ <h3>후기 점수 (45%)</h3>
+ <ul><li><b>별점</b>: 네이버 방문자 리뷰 하나하나의 별점을 평균 냈어요. 리뷰가 적은 곳은 우연히 높게 나올 수 있어서, 리뷰 30개만큼은 대전 전체 평균(4.66점) 쪽으로 당겨서 계산했어요. 4.0점 이하면 0점, 5.0점이면 10점이에요.</li>
+ <li><b>나쁜 후기</b>: 별점 3점 이하이거나 “불친절·실망·비추·냄새·벌레” 같은 말이 들어간 후기는 1개, “아쉬움·별로·시끄러움·비쌈”은 0.5개로 셌어요. (“불친절한 분 없어요”처럼 부정이 뒤집힌 말은 빼요.) 이 비율이 0%면 10점, 15% 이상이면 0점이에요.</li></ul>
+ <h3>분만병원과 가까운 정도 (30%)</h3>
+ <ul><li>가장 가까운 분만 병원까지 직선거리. 같은 건물(150 m 이내)이면 10점, 5 km 넘으면 0점.</li></ul>
+ <h3>대전 서구에서 가까운 정도 (25%)</h3>
+ <ul><li>대전 서구청에서 직선거리. 0 km면 10점, 15 km 넘으면 0점.</li></ul>
+ <p class="tiny">가격은 아직 반영하지 않았어요. 네이버 후기는 대부분 좋은 말 위주라, 상담·투어로 직접 확인하는 게 제일 정확해요.</p>
+</div>
+<footer>자료: 네이버 플레이스 방문자 리뷰·검색 (2026-10-26 수집), 건강보험심사평가원 분만가능 의료기관 목록(2026.4.30 기준, 공공데이터포털). 지도: © OpenStreetMap 기여자. 후기 인용은 짧게 줄였고 원문은 네이버에서 볼 수 있어요.</footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+ var due=new Date("2027-06-10T00:00:00"),t=new Date();t.setHours(0,0,0,0);
+ var left=Math.round((due-t)/864e5),ga=280-left,w=Math.floor(ga/7),d=ga%7;
+ document.getElementById("ga").textContent=w+"주 "+d+"일";
+ document.getElementById("dday").textContent="D-"+left;
+ document.getElementById("pg").style.width=Math.max(0,Math.min(100,ga/280*100))+"%";
+ document.getElementById("pgt").textContent="40주 중 "+w+"주째 · "+(ga<98?"임신 초기":ga<196?"임신 중기":"임신 후기");
+})();
+(function(){
+ var API="",T=document.getElementById("memoT"),B=document.getElementById("memoB"),M=document.getElementById("memoM"),L=document.getElementById("memoL");
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+ function show(a){L.innerHTML=a.map(function(r,i){var d=new Date(r.t);return '<li><span class="mw">'+esc(r.who||"")+'</span><span class="mt">'+(isNaN(d)?"":(d.getMonth()+1)+"/"+d.getDate()+" "+d.getHours()+":"+String(d.getMinutes()).padStart(2,"0"))+'</span><br>'+esc(r.msg)+(API?"":' <button class="mdel" data-del="'+i+'" type="button">지우기</button>')+'</li>'}).join("")}
+ function load(){fetch(API).then(function(r){return r.json()}).then(show).catch(function(){M.textContent="메모를 불러오지 못했어요."})}
+ var S=document.getElementById("memoS"),K="hsbaby-memo";
+ function loc(){try{return JSON.parse(localStorage.getItem(K)||"[]")}catch(e){return []}}
+ function txt(a){return "[현석·유진 아기 산후조리원 메모]\n"+a.map(function(r){return "· "+r.who+": "+r.msg}).join("\n")+"\n"+location.href}
+ S.onclick=function(){var a=API?[]:loc(),cur=T.value.trim();
+  if(cur)a=a.concat([{who:document.querySelector('input[name=who]:checked').value,msg:cur}]);
+  if(!a.length){M.textContent="먼저 메모를 적어 주세요.";return}
+  var t=txt(a);
+  if(navigator.share){navigator.share({text:t}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){M.textContent="복사했어요. 카톡 대화창에 붙여 넣어 형한테 보내 주세요."})}
+  else{prompt("아래 내용을 복사해서 형한테 보내 주세요",t)}};
+ if(!API){
+  show(loc());
+  L.addEventListener("click",function(e){var i=e.target.getAttribute&&e.target.getAttribute("data-del");if(i===null)return;var a=loc();a.splice(+i,1);try{localStorage.setItem(K,JSON.stringify(a))}catch(x){}show(a)});
+  B.onclick=function(){var msg=T.value.trim();if(!msg)return;var a=loc();a.unshift({t:new Date().toISOString(),who:document.querySelector('input[name=who]:checked').value,msg:msg});
+   try{localStorage.setItem(K,JSON.stringify(a));T.value="";M.textContent="이 휴대폰에 저장했어요. 형한테 보내려면 “형한테 보내기”를 눌러 주세요 🦈"}catch(x){M.textContent="저장이 안 되는 브라우저예요. “형한테 보내기”로 바로 보내 주세요."}show(loc())};
+  return}
+ load();
+ B.onclick=function(){var msg=T.value.trim();if(!msg)return;var who=document.querySelector('input[name=who]:checked').value;
+  B.disabled=true;M.textContent="저장하는 중…";
+  fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({who:who,msg:msg})})
+   .then(function(r){return r.json()}).then(function(j){if(!j.ok)throw 0;T.value="";M.textContent="고마워요! 형이 볼 수 있게 저장됐어요 🦈";load()})
+   .catch(function(){M.textContent="저장이 안 됐어요. 잠시 뒤 다시 눌러 주세요."}).finally(function(){B.disabled=false});};
+})();
+var P=[{"id": "1276739692", "rank": 1, "name": "모태산후조리원", "x": 127.3773605, "y": 36.3503812, "total": 8.8, "attached": true}, {"id": "33082738", "rank": 2, "name": "라온산후조리원", "x": 127.4356227, "y": 36.3500205, "total": 8.7, "attached": true}, {"id": "38729746", "rank": 3, "name": "서울여성병원제2산후조리원", "x": 127.3806307, "y": 36.3459734, "total": 8.5, "attached": true}, {"id": "1788970414", "rank": 4, "name": "미즈제일산후조리원", "x": 127.3440862, "y": 36.35254, "total": 8.4, "attached": true}, {"id": "183856246", "rank": 5, "name": "서울여성병원제1산후조리원", "x": 127.3806916, "y": 36.3453878, "total": 8.1, "attached": true}, {"id": "15963554", "rank": 6, "name": "가오플러스산후조리원", "x": 127.4560428, "y": 36.3066711, "total": 7.8, "attached": true}, {"id": "1026717335", "rank": 7, "name": "미즈여성병원부설산후조리원", "x": 127.3854684, "y": 36.3432926, "total": 7.8, "attached": true}, {"id": "1818261448", "rank": 8, "name": "더블유산후조리원", "x": 127.3840565, "y": 36.3437038, "total": 7.5, "attached": true}, {"id": "16144214", "rank": 9, "name": "아랫목산후조리원", "x": 127.3852826, "y": 36.3435337, "total": 7.9, "attached": true}, {"id": "33633784", "rank": 10, "name": "세란산후조리원", "x": 127.3889767, "y": 36.3464399, "total": 7.7, "attached": false}],H=[{"name": "유성선병원", "x": 127.3249507, "y": 36.3751715, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/12911002/home"}, {"name": "미즈제일여성병원", "x": 127.3442402, "y": 36.3525085, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/1244956324/home"}, {"name": "대전을지대학교병원", "x": 127.3821693, "y": 36.3553728, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686917/home"}, {"name": "건양대학교병원", "x": 127.342613, "y": 36.3066419, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/12131104/home"}, {"name": "미즈여성병원", "x": 127.3853621, "y": 36.3433459, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11601988/home"}, {"name": "더블유여성병원", "x": 127.3839428, "y": 36.3435824, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/31267505/home"}, {"name": "서울여성병원", "x": 127.3805979, "y": 36.3454381, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11482617/home"}, {"name": "예담산부인과의원", "x": 127.3343934, "y": 36.3038833, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11868833/home"}, {"name": "모태산부인과의원", "x": 127.3774436, "y": 36.3503436, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11559838/home"}, {"name": "대전한국병원", "x": 127.4358122, "y": 36.3481706, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11480812/home"}, {"name": "가오플러스산부인과의원", "x": 127.4559834, "y": 36.3065871, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11886847/home"}, {"name": "라온산부인과의원", "x": 127.4358549, "y": 36.3492474, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/33331633/home"}, {"name": "충남대학교병원", "x": 127.415363, "y": 36.316908, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/11559175/home"}, {"name": "가톨릭대학교 대전성모병원", "x": 127.4201629, "y": 36.323042, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686910/home"}, {"name": "대전선병원", "x": 127.4104138, "y": 36.3360668, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11559131/home"}],HOME={"x": 127.383844, "y": 36.355504};
+(function(){
+ if(!window.L)return;
+ var m=L.map("map",{scrollWheelZoom:false}).setView([HOME.y,HOME.x],12);
+ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
+ var mk={},b=[];
+ H.forEach(function(h){var x=L.marker([h.y,h.x],{icon:L.divIcon({className:"",html:'<div class="hpin">🏥</div>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(m)
+  .bindPopup("<b>"+h.name+"</b><br>"+h.type+(h.night?" · 야간 분만":"")+(h.url?'<br><a href="'+h.url+'" target="_blank">네이버에서 보기</a>':""));b.push([h.y,h.x]);});
+ L.marker([HOME.y,HOME.x],{icon:L.divIcon({className:"",html:'<div class="hpin">⭐</div>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(m).bindPopup("대전 서구청 (기준점)");
+ P.slice().reverse().forEach(function(p){var c=p.attached?"#ff8fb1":"#4aa8d8";
+  var x=L.marker([p.y,p.x],{zIndexOffset:1000-p.rank,icon:L.divIcon({className:"",html:'<div class="pin" style="background:'+c+'"><b>'+p.rank+'</b></div>',iconSize:[28,28],iconAnchor:[14,28],popupAnchor:[0,-26]})}).addTo(m)
+  .bindPopup("<b>"+p.rank+"위 "+p.name+"</b><br>총점 "+p.total+'/10<br><a href="#p'+p.id+'">목록에서 보기</a>');mk[p.id]=x;b.push([p.y,p.x]);});
+ m.fitBounds(b,{padding:[20,20]});
+ document.querySelectorAll("[data-fly]").forEach(function(btn){btn.onclick=function(){var id=btn.getAttribute("data-fly"),p=P.find(function(q){return q.id==id});
+  document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){m.setView([p.y,p.x],15);mk[id].openPopup();},350);};});
+ document.querySelectorAll(".card").forEach(function(c){c.addEventListener("mouseenter",function(){c.classList.add("hl")});c.addEventListener("mouseleave",function(){c.classList.remove("hl")});});
+})();
+</script></body></html>
