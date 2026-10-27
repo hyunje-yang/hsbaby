@@ -18,7 +18,7 @@ body{margin:0;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sys
 .bub{position:absolute;bottom:-20px;border-radius:50%;background:rgba(255,255,255,.55);animation:up linear infinite}
 @keyframes up{to{transform:translateY(-420px);opacity:0}}
 .wave{position:absolute;left:0;bottom:-1px;width:100%;height:46px}
-.baby{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:18px;margin:0 0 22px;position:relative;box-shadow:0 8px 24px rgba(74,168,216,.15)}
+.baby{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:18px;margin:-40px 0 22px;position:relative;box-shadow:0 8px 24px rgba(74,168,216,.15)}
 .memo{background:#fff4d6;border:2px solid #ffd36e;border-radius:22px;padding:16px 18px;margin:-40px 0 16px;position:relative;box-shadow:0 8px 24px rgba(255,180,0,.15)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .memo{background:#3a3220;border-color:#7a6327}}
 .memo h2{margin:0 0 4px;font-size:19px} .who{display:flex;gap:14px;margin:8px 0 6px;font-size:15px}
@@ -86,15 +86,6 @@ footer{font-size:12px;color:var(--mute);margin-top:26px}
  <svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none"><path d="M0 22 Q150 0 300 22 T600 22 T900 22 T1200 22 V46 H0Z" fill="var(--bg)"/></svg>
 </header>
 <main class="wrap">
-<section class="memo">
- <h2>💌 현석, 유진가 하고싶은 말</h2>
- <p class="tiny">궁금한 점, 더 찾아봤으면 하는 조리원, 바뀐 조건(예산·위치·병원)을 적어 주세요. “남기기”는 이 휴대폰에 저장되고, “형한테 보내기”를 누르면 카카오톡 등으로 형(현제)에게 보낼 수 있어요.</p>
- <div class="who"><label><input type="radio" name="who" value="현석" checked> 현석</label><label><input type="radio" name="who" value="유진"> 유진</label></div>
- <textarea id="memoT" rows="3" maxlength="2000" placeholder="예) 유성선병원 근처 조리원도 더 찾아봐 줘"></textarea>
- <div class="mrow"><button class="btn" id="memoB" type="button">남기기</button><button class="btn ghost" id="memoS" type="button">형한테 보내기 💬</button></div>
- <div id="memoM" class="tiny"></div>
- <ul id="memoL" class="mlist"></ul>
-</section>
 <section class="baby">
  <h2>👶 우리 아기</h2>
  <div class="bgrid">
@@ -292,34 +283,6 @@ footer{font-size:12px;color:var(--mute);margin-top:26px}
  document.getElementById("dday").textContent="D-"+left;
  document.getElementById("pg").style.width=Math.max(0,Math.min(100,ga/280*100))+"%";
  document.getElementById("pgt").textContent="40주 중 "+w+"주째 · "+(ga<98?"임신 초기":ga<196?"임신 중기":"임신 후기");
-})();
-(function(){
- var API="",T=document.getElementById("memoT"),B=document.getElementById("memoB"),M=document.getElementById("memoM"),L=document.getElementById("memoL");
- function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
- function show(a){L.innerHTML=a.map(function(r,i){var d=new Date(r.t);return '<li><span class="mw">'+esc(r.who||"")+'</span><span class="mt">'+(isNaN(d)?"":(d.getMonth()+1)+"/"+d.getDate()+" "+d.getHours()+":"+String(d.getMinutes()).padStart(2,"0"))+'</span><br>'+esc(r.msg)+(API?"":' <button class="mdel" data-del="'+i+'" type="button">지우기</button>')+'</li>'}).join("")}
- function load(){fetch(API).then(function(r){return r.json()}).then(show).catch(function(){M.textContent="메모를 불러오지 못했어요."})}
- var S=document.getElementById("memoS"),K="hsbaby-memo";
- function loc(){try{return JSON.parse(localStorage.getItem(K)||"[]")}catch(e){return []}}
- function txt(a){return "[현석·유진 아기 산후조리원 메모]\n"+a.map(function(r){return "· "+r.who+": "+r.msg}).join("\n")+"\n"+location.href}
- S.onclick=function(){var a=API?[]:loc(),cur=T.value.trim();
-  if(cur)a=a.concat([{who:document.querySelector('input[name=who]:checked').value,msg:cur}]);
-  if(!a.length){M.textContent="먼저 메모를 적어 주세요.";return}
-  var t=txt(a);
-  if(navigator.share){navigator.share({text:t}).catch(function(){})}
-  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){M.textContent="복사했어요. 카톡 대화창에 붙여 넣어 형한테 보내 주세요."})}
-  else{prompt("아래 내용을 복사해서 형한테 보내 주세요",t)}};
- if(!API){
-  show(loc());
-  L.addEventListener("click",function(e){var i=e.target.getAttribute&&e.target.getAttribute("data-del");if(i===null)return;var a=loc();a.splice(+i,1);try{localStorage.setItem(K,JSON.stringify(a))}catch(x){}show(a)});
-  B.onclick=function(){var msg=T.value.trim();if(!msg)return;var a=loc();a.unshift({t:new Date().toISOString(),who:document.querySelector('input[name=who]:checked').value,msg:msg});
-   try{localStorage.setItem(K,JSON.stringify(a));T.value="";M.textContent="이 휴대폰에 저장했어요. 형한테 보내려면 “형한테 보내기”를 눌러 주세요 🦈"}catch(x){M.textContent="저장이 안 되는 브라우저예요. “형한테 보내기”로 바로 보내 주세요."}show(loc())};
-  return}
- load();
- B.onclick=function(){var msg=T.value.trim();if(!msg)return;var who=document.querySelector('input[name=who]:checked').value;
-  B.disabled=true;M.textContent="저장하는 중…";
-  fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({who:who,msg:msg})})
-   .then(function(r){return r.json()}).then(function(j){if(!j.ok)throw 0;T.value="";M.textContent="고마워요! 형이 볼 수 있게 저장됐어요 🦈";load()})
-   .catch(function(){M.textContent="저장이 안 됐어요. 잠시 뒤 다시 눌러 주세요."}).finally(function(){B.disabled=false});};
 })();
 var P=[{"id": "1276739692", "rank": 1, "name": "모태산후조리원", "x": 127.3773605, "y": 36.3503812, "total": 8.8, "attached": true}, {"id": "33082738", "rank": 2, "name": "라온산후조리원", "x": 127.4356227, "y": 36.3500205, "total": 8.7, "attached": true}, {"id": "38729746", "rank": 3, "name": "서울여성병원제2산후조리원", "x": 127.3806307, "y": 36.3459734, "total": 8.5, "attached": true}, {"id": "1788970414", "rank": 4, "name": "미즈제일산후조리원", "x": 127.3440862, "y": 36.35254, "total": 8.4, "attached": true}, {"id": "183856246", "rank": 5, "name": "서울여성병원제1산후조리원", "x": 127.3806916, "y": 36.3453878, "total": 8.1, "attached": true}, {"id": "15963554", "rank": 6, "name": "가오플러스산후조리원", "x": 127.4560428, "y": 36.3066711, "total": 7.8, "attached": true}, {"id": "1026717335", "rank": 7, "name": "미즈여성병원부설산후조리원", "x": 127.3854684, "y": 36.3432926, "total": 7.8, "attached": true}, {"id": "1818261448", "rank": 8, "name": "더블유산후조리원", "x": 127.3840565, "y": 36.3437038, "total": 7.5, "attached": true}, {"id": "16144214", "rank": 9, "name": "아랫목산후조리원", "x": 127.3852826, "y": 36.3435337, "total": 7.9, "attached": true}, {"id": "33633784", "rank": 10, "name": "세란산후조리원", "x": 127.3889767, "y": 36.3464399, "total": 7.7, "attached": false}],H=[{"name": "유성선병원", "x": 127.3249507, "y": 36.3751715, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/12911002/home"}, {"name": "미즈제일여성병원", "x": 127.3442402, "y": 36.3525085, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/1244956324/home"}, {"name": "대전을지대학교병원", "x": 127.3821693, "y": 36.3553728, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686917/home"}, {"name": "건양대학교병원", "x": 127.342613, "y": 36.3066419, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/12131104/home"}, {"name": "미즈여성병원", "x": 127.3853621, "y": 36.3433459, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11601988/home"}, {"name": "더블유여성병원", "x": 127.3839428, "y": 36.3435824, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/31267505/home"}, {"name": "서울여성병원", "x": 127.3805979, "y": 36.3454381, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11482617/home"}, {"name": "예담산부인과의원", "x": 127.3343934, "y": 36.3038833, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11868833/home"}, {"name": "모태산부인과의원", "x": 127.3774436, "y": 36.3503436, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11559838/home"}, {"name": "대전한국병원", "x": 127.4358122, "y": 36.3481706, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11480812/home"}, {"name": "가오플러스산부인과의원", "x": 127.4559834, "y": 36.3065871, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11886847/home"}, {"name": "라온산부인과의원", "x": 127.4358549, "y": 36.3492474, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/33331633/home"}, {"name": "충남대학교병원", "x": 127.415363, "y": 36.316908, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/11559175/home"}, {"name": "가톨릭대학교 대전성모병원", "x": 127.4201629, "y": 36.323042, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686910/home"}, {"name": "대전선병원", "x": 127.4104138, "y": 36.3360668, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11559131/home"}],HOME={"x": 127.383844, "y": 36.355504};
 (function(){
