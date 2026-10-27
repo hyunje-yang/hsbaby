@@ -60,17 +60,16 @@ h2.sec{font-size:20px;margin:30px 0 6px} .sub{color:var(--mute);margin:0 0 14px;
 .badge{display:inline-block;margin-top:5px;font-size:12.5px;padding:2px 9px;border-radius:20px} .att{background:#ffe3ec;color:#b03a62} .far{background:#e6f1fa;color:#3b6e91}
 .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
 .facts div{background:var(--bg);border-radius:12px;padding:8px 10px;min-width:0}
-.facts span{display:block;font-size:12px;color:var(--mute)} .facts b{font-size:16px} .facts small{display:block;font-size:12px;color:var(--mute);overflow-wrap:anywhere}
+.facts .wide{grid-column:1/-1} .facts span{display:block;font-size:12px;color:var(--mute)} .facts b{font-size:16px} .facts small{display:block;font-size:12px;color:var(--mute);overflow-wrap:anywhere}
 .facts a{color:var(--blue)}
 .bar{display:flex;align-items:center;gap:8px;font-size:13px;margin:4px 0} .bl{width:76px;color:var(--mute)}
 .bt{flex:1;height:9px;background:var(--bg);border-radius:6px;overflow:hidden} .bt i{display:block;height:100%;border-radius:6px}
-.c1{background:var(--pink)} .c2{background:var(--blue)} .c3{background:var(--mint)} .bar b{width:30px;text-align:right}
+.c1{background:var(--pink)} .c2{background:var(--blue)} .c3{background:var(--mint)} .c4{background:var(--yellow)} .bar b{width:30px;text-align:right}
 .tags{margin:10px 0 4px} .tag{display:inline-block;font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin:0 5px 5px 0} .tag small{color:var(--mute)}
 details{margin:6px 0} summary{cursor:pointer;color:var(--red);font-size:14px;font-weight:600}
 .neg{list-style:none;padding:0;margin:8px 0 0;font-size:14px} .neg li{background:var(--bg);border-left:4px solid var(--red);border-radius:10px;padding:8px 11px;margin:0 0 8px} .neg li.nm{border-left-color:var(--yellow)} .nh{font-size:12.5px;font-weight:700;color:var(--red);margin-bottom:3px} .nm .nh{color:#b8860b} .nb{white-space:pre-wrap;overflow-wrap:anywhere} .tiny{font-size:12px;color:var(--mute);margin:2px 0}
 .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .btn{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:12px;border:0;background:var(--blue);color:#fff;text-decoration:none;cursor:pointer}
-.btn.warn{background:#9aa9ba}
 .btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
 .leaflet-tile-pane{filter:saturate(.75) brightness(1.04)}
 #map{height:430px;border-radius:20px;border:2px solid var(--line);z-index:0}
@@ -133,19 +132,20 @@ html{scroll-behavior:smooth}
 </section>
 
 <h2 class="sec" id="sec-rank">🏆 산후조리원 추천 순위</h2>
-<p class="sub">대전 산후조리원 10곳(네이버 지도에 등록된 전부)의 방문자 후기 594개를 모두 읽고 점수를 매겼어요. 후기 40% · 분만병원과 가까운 정도 40% · 대전 서구에서 가까운 정도 20%.</p>
+<p class="sub">복지부에 운영 중으로 올라 있는 대전 산후조리원 9곳 전부예요. 네이버 방문자 후기 594개를 모두 읽고 점수를 매겼어요. 후기 35% · 분만병원과 가까운 정도 40% · 대전 서구에서 가까운 정도 15% · 가격 10%.</p>
 
 <article class="card" id="p1276739692" data-id="1276739692">
   <div class="top"><div class="rk">1</div>
     <div class="ttl"><h3>모태산후조리원</h3><div class="addr">대전 서구 대덕대로 191 3층, 5층</div><span class="badge att">🏥 같은 건물: 모태산부인과의원</span></div>
-    <div class="tot"><b>8.9</b><small>/10</small></div></div>
+    <div class="tot"><b>9.0</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 5.00</b><small>후기 65개 · 별점 남긴 사람 1명</small></div>
     <div><span>나쁜 후기</span><b>2%</b><small>1개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>9 m</b><small><a href="https://m.place.naver.com/place/11559838/home" target="_blank" rel="noopener">모태산부인과의원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>813 m</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 315만원</b><small>특실 375만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-486-1114</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:76%"></i></span><b>7.6</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:95%"></i></span><b>9.5</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:76%"></i></span><b>7.6</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:95%"></i></span><b>9.5</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:94%"></i></span><b>9.4</b></div>
   <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>43</small></span><span class="tag">아기 케어를 잘해줘요 <small>38</small></span><span class="tag">친절해요 <small>30</small></span><span class="tag">위생적으로 케어해줘요 <small>19</small></span></div>
   <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 2개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">강한 불만 · 불친절 · 22.5.28.토</div><div class="nb">이 산부인과 카운터에 있는 사람들 진짜 불친절함</div></li><li class="nm"><div class="nh">가벼운 아쉬움 · 아쉬, 시끄 · 24.11.11.월</div><div class="nb">친절하고 모유수유생각있다면 모태산후조리원을 추천한다. 모유수유에 진심이고 강요는 안하심. 한다고 하면 적극도와주심
 가슴아파서 잠못잘때 셀프마사지도 알려주셔서 다음날부터 안아프게 잤음
@@ -154,106 +154,71 @@ html{scroll-behavior:smooth}
 단점이라면 반신욕기가 없어서 아쉬움
 아이를 정말 예뻐해주시면서 케어해주셔서 만족스러움
 간식시간, 식사시간, 모자동실시간, 프로그램교육 등 방송으로 알려주심ㅎ</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1276739692/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1276739692/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn warn" href="http://www.motaesanhu.com" target="_blank" rel="noopener">홈페이지 ⚠</a><button class="btn ghost" data-fly="1276739692">지도에서 보기</button></div>
-  <p class="tiny">⚠ 이 조리원 홈페이지는 보안 연결(https)을 지원하지 않아서 “안전하지 않은 사이트” 경고가 떠요. <b>Continue to site(사이트로 계속)</b>를 누르면 열려요.</p>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1276739692/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/1276739692" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/1276739692/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1276739692">지도에서 보기</button></div>
 </article>
 <article class="card" id="p1788970414" data-id="1788970414">
   <div class="top"><div class="rk">2</div>
     <div class="ttl"><h3>미즈제일산후조리원</h3><div class="addr">대전 유성구 계룡로 126</div><span class="badge att">🏥 같은 건물: 미즈제일여성병원</span></div>
-    <div class="tot"><b>8.7</b><small>/10</small></div></div>
+    <div class="tot"><b>8.9</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 4.80</b><small>후기 32개 · 별점 남긴 사람 5명</small></div>
     <div><span>나쁜 후기</span><b>2%</b><small>0개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>14 m</b><small><a href="https://m.place.naver.com/place/1244956324/home" target="_blank" rel="noopener">미즈제일여성병원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>3.6 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 310만원</b><small>특실 580만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-821-0001</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:79%"></i></span><b>7.9</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:76%"></i></span><b>7.6</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:79%"></i></span><b>7.9</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:76%"></i></span><b>7.6</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:97%"></i></span><b>9.7</b></div>
   <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>19</small></span><span class="tag">아기 케어를 잘해줘요 <small>14</small></span><span class="tag">친절해요 <small>11</small></span><span class="tag">식사가 맛있어요 <small>8</small></span></div>
   <details><summary>가장 나쁜 후기 1개 보기 <small>(나쁜 후기 전체 1개 중)</small></summary><ul class="neg"><li class="nm"><div class="nh">가벼운 아쉬움 · 비싸 · 23.1.17.화</div><div class="nb">잘 쉬다 왔어용
 비싸긴 하지만 편하고 좋아서
 둘째 때도 또 가고싶어요~~~
 식사가 맛있어요</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1788970414/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1788970414/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="https://cafe.naver.com/mizjeilpcc" target="_blank" rel="noopener">카페</a><a class="btn" href="https://www.mizjeil.com/" target="_blank" rel="noopener">홈페이지</a><button class="btn ghost" data-fly="1788970414">지도에서 보기</button></div>
-  
-</article>
-<article class="card" id="p183856246" data-id="183856246">
-  <div class="top"><div class="rk">3</div>
-    <div class="ttl"><h3>서울여성병원제1산후조리원</h3><div class="addr">대전 서구 문정로 7 신한일빌딩</div><span class="badge att">🏥 같은 건물: 서울여성병원</span></div>
-    <div class="tot"><b>8.3</b><small>/10</small></div></div>
-  <div class="facts">
-    <div><span>네이버 후기</span><b>★ 4.32</b><small>후기 62개 · 별점 남긴 사람 11명</small></div>
-    <div><span>나쁜 후기</span><b>5%</b><small>2개 강한 불만</small></div>
-    <div><span>가까운 분만병원</span><b>10 m</b><small><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a> · 야간 분만</small></div>
-    <div><span>서구청에서</span><b>1.2 km</b><small>직선거리</small></div>
-  </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:62%"></i></span><b>6.2</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:92%"></i></span><b>9.2</b></div>
-  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>40</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">친절해요 <small>17</small></span><span class="tag">병원 연계가 잘 돼있어요 <small>11</small></span></div>
-  <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 4개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">★3 · 강한 불만 · 낮은 별점 · 21.4.1.목</div><div class="nb">ㄱㅆ</div></li><li class="ns"><div class="nh">★4 · 강한 불만 · 벌레, 아쉬 · 9.26.토</div><div class="nb">대전서울여성병원 1산후조리원 이용 후기입니다. 신생아실 선생님들께서 아기를 사랑으로 잘 돌봐주시고 친절하게 대해주셔서 감사했어요. 뷔페식으로 제공되는 조리원 식사도 맛있고 만족스러웠습니다. 다만 첫날 자리가 없어 801호에서 하루 대기 후 오늘 702호로 이동했는데, 시설이 다소 노후된 탓인지 아쉬운 점이 있었어요. 청소여사님께 물어보니 최근 세스코 방역했다 들었는데 801호에서 새벽에 돈벌레로 추정되는 벌레가 나와 잡느라 잠을 완전 설쳤습니다. 결국못잡음 ㅠ 출산 후 회복과 휴식이 가장 중요한 시기에 첫날부터 제대로 쉬지 못해 너무 아쉬웠어요. 신생아 케어와 식사는 만족스러웠지만, 객실 해충 관리와 시설 개선에는 더욱 신경 써주셨으면 합니다. 좋은 점이 많았던 만큼 이 부분이 아쉬워 별 하나는 감점합니다ㅜ</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/183856246/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/183856246/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="183856246">지도에서 보기</button></div>
-  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1788970414/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/1788970414" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/1788970414/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1788970414">지도에서 보기</button></div>
 </article>
 <article class="card" id="p15963554" data-id="15963554">
-  <div class="top"><div class="rk">4</div>
+  <div class="top"><div class="rk">3</div>
     <div class="ttl"><h3>가오플러스산후조리원</h3><div class="addr">대전 동구 은어송로 63</div><span class="badge att">🏥 같은 건물: 가오플러스산부인과의원</span></div>
-    <div class="tot"><b>8.2</b><small>/10</small></div></div>
+    <div class="tot"><b>8.6</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 4.75</b><small>후기 29개 · 별점 남긴 사람 2명</small></div>
     <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>11 m</b><small><a href="https://m.place.naver.com/place/11886847/home" target="_blank" rel="noopener">가오플러스산부인과의원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>8.4 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 304만원</b><small>특실 380만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-286-3535</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:83%"></i></span><b>8.3</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:44%"></i></span><b>4.4</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:83%"></i></span><b>8.3</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:44%"></i></span><b>4.4</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:100%"></i></span><b>10.0</b></div>
   <div class="tags"><span class="tag">친절해요 <small>23</small></span><span class="tag">산모 케어를 잘해줘요 <small>13</small></span><span class="tag">시설이 깔끔해요 <small>12</small></span><span class="tag">아기 케어를 잘해줘요 <small>11</small></span></div>
   
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/15963554/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/15963554/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="15963554">지도에서 보기</button></div>
-  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/15963554/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/15963554" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/15963554/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="15963554">지도에서 보기</button></div>
 </article>
 <article class="card" id="p1026717335" data-id="1026717335">
-  <div class="top"><div class="rk">5</div>
+  <div class="top"><div class="rk">4</div>
     <div class="ttl"><h3>미즈여성병원부설산후조리원</h3><div class="addr">대전 서구 문정로2번길 95</div><span class="badge att">🏥 같은 건물: 미즈여성병원</span></div>
-    <div class="tot"><b>8.1</b><small>/10</small></div></div>
+    <div class="tot"><b>8.2</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 4.46</b><small>후기 84개 · 별점 남긴 사람 24명</small></div>
     <div><span>나쁜 후기</span><b>7%</b><small>5개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>11 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>1.4 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 326만원</b><small>특실 427만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-476-9970</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:57%"></i></span><b>5.7</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:57%"></i></span><b>5.7</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:89%"></i></span><b>8.9</b></div>
   <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>51</small></span><span class="tag">친절해요 <small>46</small></span><span class="tag">아기 케어를 잘해줘요 <small>39</small></span><span class="tag">병원 연계가 잘 돼있어요 <small>29</small></span></div>
   <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 6개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">★3 · 강한 불만 · 낮은 별점 · 20.10.14.수</div><div class="nb">굿</div></li><li class="ns"><div class="nh">★3 · 강한 불만 · 낮은 별점 · 20.10.8.목</div><div class="nb">굿</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1026717335/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1026717335/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1026717335">지도에서 보기</button></div>
-  
-</article>
-<article class="card" id="p1818261448" data-id="1818261448">
-  <div class="top"><div class="rk">6</div>
-    <div class="ttl"><h3>더블유산후조리원</h3><div class="addr">대전 서구 문정로48번길 70</div><span class="badge att">🏥 같은 건물: 더블유여성병원</span></div>
-    <div class="tot"><b>7.8</b><small>/10</small></div></div>
-  <div class="facts">
-    <div><span>네이버 후기</span><b>★ 3.88</b><small>후기 69개 · 별점 남긴 사람 16명</small></div>
-    <div><span>나쁜 후기</span><b>6%</b><small>4개 강한 불만</small></div>
-    <div><span>가까운 분만병원</span><b>17 m</b><small><a href="https://m.place.naver.com/place/31267505/home" target="_blank" rel="noopener">더블유여성병원</a> · 야간 분만</small></div>
-    <div><span>서구청에서</span><b>1.3 km</b><small>직선거리</small></div>
-  </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:50%"></i></span><b>5.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
-  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>45</small></span><span class="tag">친절해요 <small>33</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">위생적으로 케어해줘요 <small>22</small></span></div>
-  <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 4개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">★0.5 · 강한 불만 · 낮은 별점 · 7.31.금</div><div class="nb">처음 조리원 들어간 날 산모가 많았어서 신생아실 인력부족인지 필수 모자동실 시간에 대뜸 들어와서 기저귀가는거, 분유먹이는거 성의없이 후다닥 알려주고 나가버림
-조리원 있는 기간 내내 수유자세 봐달라고 하면 대충 봐주고 끝임 자세하게는 아니더라도 조리원에서 배우는게 있겠지 하고 갔지만 결국 유튜브 보고 독학함
-마사지도 기본 서비스 마사지 받는 내내 부담스러울 정도로 영업해서 당황스러웠음
-퇴소교육이라도 뭐가 있을까 기대했지만 그냥 안내문 읽어주는게 다고 목욕방법도 유튜브 찾아보라고 함 ㅎㅎ</div></li><li class="ns"><div class="nh">★0.5 · 강한 불만 · 낮은 별점 · 21.4.30.금</div><div class="nb">조리원 방 수전에서 녹가루가 나왔습니다.  병원 원무과장이라는 분이 전화하셨는데, 해줄게 없다 별일아니라고 하셨습니다. 여기 가시는 분들 알고 가시라구요.</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1818261448/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/1818261448/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn warn" href="http://www.w-woman.co.kr/" target="_blank" rel="noopener">홈페이지 ⚠</a><button class="btn ghost" data-fly="1818261448">지도에서 보기</button></div>
-  <p class="tiny">⚠ 이 조리원 홈페이지는 보안 연결(https)을 지원하지 않아서 “안전하지 않은 사이트” 경고가 떠요. <b>Continue to site(사이트로 계속)</b>를 누르면 열려요.</p>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1026717335/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/1026717335" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/1026717335/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1026717335">지도에서 보기</button></div>
 </article>
 <article class="card" id="p33082738" data-id="33082738">
-  <div class="top"><div class="rk">7</div>
+  <div class="top"><div class="rk">5</div>
     <div class="ttl"><h3>라온산후조리원</h3><div class="addr">대전 동구 동서대로1683번길 33-11</div><span class="badge far">🚶 분만병원까지 88 m (다른 건물)</span></div>
-    <div class="tot"><b>7.8</b><small>/10</small></div></div>
+    <div class="tot"><b>7.9</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 4.90</b><small>후기 224개 · 별점 남긴 사람 86명</small></div>
     <div><span>나쁜 후기</span><b>1%</b><small>0개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>88 m</b><small><a href="https://m.place.naver.com/place/33331633/home" target="_blank" rel="noopener">라온산부인과의원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>4.7 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 328만원</b><small>특실 432만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-286-3575</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:88%"></i></span><b>8.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:73%"></i></span><b>7.3</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:69%"></i></span><b>6.9</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:88%"></i></span><b>8.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:73%"></i></span><b>7.3</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:69%"></i></span><b>6.9</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:88%"></i></span><b>8.8</b></div>
   <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>199</small></span><span class="tag">아기 케어를 잘해줘요 <small>191</small></span><span class="tag">위생적으로 케어해줘요 <small>132</small></span><span class="tag">식사가 맛있어요 <small>91</small></span></div>
   <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 5개 중)</small></summary><ul class="neg"><li class="nm"><div class="nh">★5 · 가벼운 아쉬움 · 아쉬 · 7.23.목</div><div class="nb">첫째 낳고 만족스럽게 이용했던 곳이라서 둘째도 고민없이 이용했구요~여전히 시설도 깔끔하고 선생님들도 친절하시구 아기케어도 잘해주시구 밥도 맛있어요ㅎㅎ매주 수요일 미니뷔페👍마지막이라 아쉬울정도ㅎㅎ덕분에 몸 조리 잘하고 갑니다~</div></li><li class="nm"><div class="nh">가벼운 아쉬움 · 별로 · 1.17.토</div><div class="nb">임신사실을 알고 바로 예약한 조리원!!
 우선 남편 출퇴근가능!
@@ -268,60 +233,78 @@ html{scroll-behavior:smooth}
 매주 수요일 9시는 아가들 촬영이 있어요!(어떤날스튜디오)
 그리고 미니부페도!! 있습니다!!
 밥이.. 맛있어요 ㅠ.. 간식도 3번 챙겨주셔요!!</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/33082738/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/33082738/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><a class="btn" href="https://blog.naver.com/raonobgy1" target="_blank" rel="noopener">블로그</a><a class="btn" href="https://cafe.naver.com/raonobgy1" target="_blank" rel="noopener">카페</a><a class="btn warn" href="http://raonobgy.com/" target="_blank" rel="noopener">홈페이지 ⚠</a><button class="btn ghost" data-fly="33082738">지도에서 보기</button></div>
-  <p class="tiny">⚠ 이 조리원 홈페이지는 보안 연결(https)을 지원하지 않아서 “안전하지 않은 사이트” 경고가 떠요. <b>Continue to site(사이트로 계속)</b>를 누르면 열려요.</p>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/33082738/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/33082738" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/33082738/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="33082738">지도에서 보기</button></div>
+</article>
+<article class="card" id="p183856246" data-id="183856246">
+  <div class="top"><div class="rk">6</div>
+    <div class="ttl"><h3>서울여성병원제1산후조리원</h3><div class="addr">대전 서구 문정로 7 신한일빌딩</div><span class="badge att">🏥 같은 건물: 서울여성병원</span></div>
+    <div class="tot"><b>7.6</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 4.32</b><small>후기 62개 · 별점 남긴 사람 11명</small></div>
+    <div><span>나쁜 후기</span><b>5%</b><small>2개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>10 m</b><small><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.2 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 500만원</b><small>특실 660만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-488-3565</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:62%"></i></span><b>6.2</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:92%"></i></span><b>9.2</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:0%"></i></span><b>0.0</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>40</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">친절해요 <small>17</small></span><span class="tag">병원 연계가 잘 돼있어요 <small>11</small></span></div>
+  <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 4개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">★3 · 강한 불만 · 낮은 별점 · 21.4.1.목</div><div class="nb">ㄱㅆ</div></li><li class="ns"><div class="nh">★4 · 강한 불만 · 벌레, 아쉬 · 9.26.토</div><div class="nb">대전서울여성병원 1산후조리원 이용 후기입니다. 신생아실 선생님들께서 아기를 사랑으로 잘 돌봐주시고 친절하게 대해주셔서 감사했어요. 뷔페식으로 제공되는 조리원 식사도 맛있고 만족스러웠습니다. 다만 첫날 자리가 없어 801호에서 하루 대기 후 오늘 702호로 이동했는데, 시설이 다소 노후된 탓인지 아쉬운 점이 있었어요. 청소여사님께 물어보니 최근 세스코 방역했다 들었는데 801호에서 새벽에 돈벌레로 추정되는 벌레가 나와 잡느라 잠을 완전 설쳤습니다. 결국못잡음 ㅠ 출산 후 회복과 휴식이 가장 중요한 시기에 첫날부터 제대로 쉬지 못해 너무 아쉬웠어요. 신생아 케어와 식사는 만족스러웠지만, 객실 해충 관리와 시설 개선에는 더욱 신경 써주셨으면 합니다. 좋은 점이 많았던 만큼 이 부분이 아쉬워 별 하나는 감점합니다ㅜ</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/183856246/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/183856246" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/183856246/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="183856246">지도에서 보기</button></div>
+</article>
+<article class="card" id="p1818261448" data-id="1818261448">
+  <div class="top"><div class="rk">7</div>
+    <div class="ttl"><h3>더블유산후조리원</h3><div class="addr">대전 서구 문정로48번길 70</div><span class="badge att">🏥 같은 건물: 더블유여성병원</span></div>
+    <div class="tot"><b>7.4</b><small>/10</small></div></div>
+  <div class="facts">
+    <div><span>네이버 후기</span><b>★ 3.88</b><small>후기 69개 · 별점 남긴 사람 16명</small></div>
+    <div><span>나쁜 후기</span><b>6%</b><small>4개 강한 불만</small></div>
+    <div><span>가까운 분만병원</span><b>17 m</b><small><a href="https://m.place.naver.com/place/31267505/home" target="_blank" rel="noopener">더블유여성병원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>1.3 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 440만원</b><small>특실 500만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-485-0001</small></div>
+  </div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:50%"></i></span><b>5.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:31%"></i></span><b>3.1</b></div>
+  <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>45</small></span><span class="tag">친절해요 <small>33</small></span><span class="tag">아기 케어를 잘해줘요 <small>28</small></span><span class="tag">위생적으로 케어해줘요 <small>22</small></span></div>
+  <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 4개 중)</small></summary><ul class="neg"><li class="ns"><div class="nh">★0.5 · 강한 불만 · 낮은 별점 · 7.31.금</div><div class="nb">처음 조리원 들어간 날 산모가 많았어서 신생아실 인력부족인지 필수 모자동실 시간에 대뜸 들어와서 기저귀가는거, 분유먹이는거 성의없이 후다닥 알려주고 나가버림
+조리원 있는 기간 내내 수유자세 봐달라고 하면 대충 봐주고 끝임 자세하게는 아니더라도 조리원에서 배우는게 있겠지 하고 갔지만 결국 유튜브 보고 독학함
+마사지도 기본 서비스 마사지 받는 내내 부담스러울 정도로 영업해서 당황스러웠음
+퇴소교육이라도 뭐가 있을까 기대했지만 그냥 안내문 읽어주는게 다고 목욕방법도 유튜브 찾아보라고 함 ㅎㅎ</div></li><li class="ns"><div class="nh">★0.5 · 강한 불만 · 낮은 별점 · 21.4.30.금</div><div class="nb">조리원 방 수전에서 녹가루가 나왔습니다.  병원 원무과장이라는 분이 전화하셨는데, 해줄게 없다 별일아니라고 하셨습니다. 여기 가시는 분들 알고 가시라구요.</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/1818261448/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/1818261448" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/1818261448/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="1818261448">지도에서 보기</button></div>
 </article>
 <article class="card" id="p38729746" data-id="38729746">
   <div class="top"><div class="rk">8</div>
     <div class="ttl"><h3>서울여성병원제2산후조리원</h3><div class="addr">대전 서구 계룡로491번길 20</div><span class="badge far">🚶 분만병원까지 60 m (다른 건물)</span></div>
-    <div class="tot"><b>7.7</b><small>/10</small></div></div>
+    <div class="tot"><b>6.8</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>★ 4.50</b><small>후기 29개 · 별점 남긴 사람 8명</small></div>
     <div><span>나쁜 후기</span><b>3%</b><small>0개 강한 불만</small></div>
     <div><span>가까운 분만병원</span><b>60 m</b><small><a href="https://m.place.naver.com/place/11482617/home" target="_blank" rel="noopener">서울여성병원</a> · 야간 분만</small></div>
     <div><span>서구청에서</span><b>1.1 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 500만원</b><small>특실 공개 안 함 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-488-3565</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:70%"></i></span><b>7.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:75%"></i></span><b>7.5</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:93%"></i></span><b>9.3</b></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:70%"></i></span><b>7.0</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:75%"></i></span><b>7.5</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:93%"></i></span><b>9.3</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:0%"></i></span><b>0.0</b></div>
   <div class="tags"><span class="tag">산모 케어를 잘해줘요 <small>9</small></span><span class="tag">아기 케어를 잘해줘요 <small>8</small></span><span class="tag">친절해요 <small>7</small></span><span class="tag">시설이 깔끔해요 <small>6</small></span></div>
   <details><summary>가장 나쁜 후기 2개 보기 <small>(나쁜 후기 전체 2개 중)</small></summary><ul class="neg"><li class="nm"><div class="nh">가벼운 아쉬움 · 아쉬 · 24.8.10.토</div><div class="nb">두번째 이용할 때는 침구가 바뀌어 있어서 좋았어요
 (낡은 산모복은 좀 아쉬워요🥲)
 음식도 저한텐 괜찮았는데 지내다보면 질릴 순 있어요
 산후체조나 체형관리 프로그램 좋았고 아기 예뻐해주시며 신생아 케어 해주시는 것도 괜찮았습니다
 출산병원과 연계되어서 좋습니다</div></li><li class="nm"><div class="nh">가벼운 아쉬움 · 아쉬 · 21.11.12.금</div><div class="nb">잘 있다 왔어요 밥이 맛있고 신생아실 선생님들 친절하세요. 코로나 때문에 보호자 출입이 안되서 좀 아쉬워요.</div></li></ul><p class="tiny">네이버 방문자 후기 원문 그대로예요. 단어로 골라낸 것이라 칭찬인데 잘못 잡힌 것이 섞여 있을 수 있어요.</p></details>
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/38729746/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/38729746/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="38729746">지도에서 보기</button></div>
-  
+  <div class="links"><a class="btn" href="https://m.place.naver.com/place/38729746/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://map.naver.com/p/entry/place/38729746" target="_blank" rel="noopener">네이버 지도</a><a class="btn" href="https://m.place.naver.com/place/38729746/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="38729746">지도에서 보기</button></div>
 </article><h2 class="sec">🫧 후기가 거의 없는 곳</h2><p class="sub">네이버 후기가 10개보다 적어서 순위를 매기기 어려워요. 점수는 참고만 하고, 관심 있으면 직접 상담해 보세요.</p>
-<article class="card" id="p16144214" data-id="16144214">
+<article class="card" id="pm예담산후조리원" data-id="m예담산후조리원">
   <div class="top"><div class="rk">9</div>
-    <div class="ttl"><h3>아랫목산후조리원</h3><div class="addr">대전 서구 계룡로553번길 18</div><span class="badge far">🚶 분만병원까지 22 m (다른 건물)</span></div>
-    <div class="tot"><b>7.3</b><small>/10</small></div></div>
+    <div class="ttl"><h3>예담산후조리원</h3><div class="addr">대전 서구 도안대로 25, 5~6층(관저1동)</div><span class="badge att">🏥 같은 건물: 예담산부인과의원</span></div>
+    <div class="tot"><b>7.7</b><small>/10</small></div></div>
   <div class="facts">
     <div><span>네이버 후기</span><b>별점 없음</b><small>후기 0개 · 별점 남긴 사람 0명</small></div>
     <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
-    <div><span>가까운 분만병원</span><b>22 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
-    <div><span>서구청에서</span><b>1.3 km</b><small>직선거리</small></div>
+    <div><span>가까운 분만병원</span><b>0 m</b><small><a href="https://m.place.naver.com/place/11868833/home" target="_blank" rel="noopener">예담산부인과의원</a> · 야간 분만</small></div>
+    <div><span>서구청에서</span><b>7.3 km</b><small>직선거리</small></div>
+    <div class="wide"><span>2주 요금 (복지부 공표)</span><b>일반실 321만원</b><small>특실 351만원 · 같은 등급 안에서 가장 비싼 방 기준 · ☎ 042-546-9302</small></div>
   </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:58%"></i></span><b>5.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:78%"></i></span><b>7.8</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:91%"></i></span><b>9.1</b></div>
-  <div class="tags"></div>
+  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:58%"></i></span><b>5.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:100%"></i></span><b>10.0</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:52%"></i></span><b>5.2</b></div><div class="bar"><span class="bl">가격</span><span class="bt"><i class="c4" style="width:91%"></i></span><b>9.1</b></div>
+  <p class="tiny">네이버 지도에 따로 등록돼 있지 않아 후기를 모으지 못했어요. 복지부 목록에는 운영 중으로 올라 있어요.</p><div class="tags"></div>
   
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/16144214/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/16144214/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="16144214">지도에서 보기</button></div>
-  
-</article>
-<article class="card" id="p33633784" data-id="33633784">
-  <div class="top"><div class="rk">10</div>
-    <div class="ttl"><h3>세란산후조리원</h3><div class="addr">대전 서구 문정로 88</div><span class="badge far">🚶 분만병원까지 472 m (다른 건물)</span></div>
-    <div class="tot"><b>5.9</b><small>/10</small></div></div>
-  <div class="facts">
-    <div><span>네이버 후기</span><b>별점 없음</b><small>후기 0개 · 별점 남긴 사람 0명</small></div>
-    <div><span>나쁜 후기</span><b>0%</b><small>0개 강한 불만</small></div>
-    <div><span>가까운 분만병원</span><b>472 m</b><small><a href="https://m.place.naver.com/place/11601988/home" target="_blank" rel="noopener">미즈여성병원</a> · 야간 분만</small></div>
-    <div><span>서구청에서</span><b>1.1 km</b><small>직선거리</small></div>
-  </div>
-  <div class="bar"><span class="bl">후기</span><span class="bt"><i class="c1" style="width:58%"></i></span><b>5.8</b></div><div class="bar"><span class="bl">병원 가까움</span><span class="bt"><i class="c2" style="width:42%"></i></span><b>4.2</b></div><div class="bar"><span class="bl">서구 가까움</span><span class="bt"><i class="c3" style="width:93%"></i></span><b>9.3</b></div>
-  <div class="tags"></div>
-  
-  <div class="links"><a class="btn" href="https://m.place.naver.com/place/33633784/home" target="_blank" rel="noopener">네이버 플레이스</a><a class="btn" href="https://m.place.naver.com/place/33633784/review/visitor" target="_blank" rel="noopener">후기 전체 보기</a><button class="btn ghost" data-fly="33633784">지도에서 보기</button></div>
-  
+  <div class="links"><a class="btn" href="https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%20%EC%98%88%EB%8B%B4%EC%82%B0%ED%9B%84%EC%A1%B0%EB%A6%AC%EC%9B%90" target="_blank" rel="noopener">네이버 지도에서 찾기</a><button class="btn ghost" data-fly="m예담산후조리원">지도에서 보기</button></div>
 </article>
 
 <h2 class="sec" id="sec-map">🗺️ 지도로 보기</h2>
@@ -335,16 +318,21 @@ html{scroll-behavior:smooth}
 
 <h2 class="sec" id="sec-how">🔎 점수는 이렇게 매겼어요</h2>
 <div class="how">
- <h3>후기 점수 (40%)</h3>
+ <h3>후기 점수 (35%)</h3>
  <ul><li><b>별점</b>: 네이버 방문자 리뷰 하나하나의 별점을 평균 냈어요. 리뷰가 적은 곳은 우연히 높게 나올 수 있어서, 리뷰 30개만큼은 대전 전체 평균(4.66점) 쪽으로 당겨서 계산했어요. 4.0점 이하면 0점, 5.0점이면 10점이에요.</li>
  <li><b>나쁜 후기</b>: 별점 3점 이하이거나 “불친절·실망·비추·냄새·벌레” 같은 말이 들어간 후기는 1개, “아쉬움·별로·시끄러움·비쌈”은 0.5개로 셌어요. (“불친절한 분 없어요”처럼 부정이 뒤집힌 말은 빼요.) 이 비율이 0%면 10점, 15% 이상이면 0점이에요.</li></ul>
  <h3>분만병원과 가까운 정도 (40%)</h3>
  <ul><li>분만 병원은 심평원 목록의 대전 15곳이에요. <b>도로명 주소가 분만 병원과 같으면(같은 건물) 10점</b>이에요. 출산하고 바로 같은 건물로 옮길 수 있어서 가장 높게 쳤어요.</li><li>다른 건물이면 최고 8점에서 시작해 거리만큼 깎여요. 1 km 넘으면 0점.</li></ul>
- <h3>대전 서구에서 가까운 정도 (20%)</h3>
+ <h3>대전 서구에서 가까운 정도 (15%)</h3>
  <ul><li>대전 서구청에서 직선거리. 0 km면 10점, 15 km 넘으면 0점.</li></ul>
- <p class="tiny">가격은 아직 반영하지 않았어요. 네이버 후기는 대부분 좋은 말 위주라, 상담·투어로 직접 확인하는 게 제일 정확해요.</p>
+ <h3>가격 (10%)</h3>
+ <ul><li>보건복지부 2025년 하반기 산후조리원 현황(2025.12.31 기준)의 <b>일반실 2주 요금</b>이에요. 대전에서 가장 싼 곳(304만원) 10점, 가장 비싼 곳(500만원) 0점이에요.</li>
+ <li>비싸도 괜찮다고 하셔서 비중은 10%만 줬어요. 예를 들어 가장 싼 곳과 가장 비싼 곳의 총점 차이는 가격 때문에 최대 1.0점이에요.</li>
+ <li>복지부 표는 “같은 등급 안에서 가장 비싼 방” 기준이라, 실제 상담 가격은 이보다 낮을 수 있어요(할인·짧은 기간 등).</li></ul>
+ <p class="tiny">네이버 지도에는 있지만 복지부 목록(휴·폐업 제외)에 없는 곳은 뺐어요: 세란산후조리원, 아랫목산후조리원. 지금은 운영하지 않을 가능성이 커요.</p>
+ <p class="tiny">네이버 후기는 대부분 좋은 말 위주라, 상담·투어로 직접 확인하는 게 제일 정확해요.</p>
 </div>
-<footer>자료: 네이버 플레이스 방문자 리뷰·검색 (2026-10-26 수집), 건강보험심사평가원 분만가능 의료기관 목록(2026.4.30 기준, 공공데이터포털). 지도: © OpenStreetMap 기여자. 후기 인용은 짧게 줄였고 원문은 네이버에서 볼 수 있어요.</footer>
+<footer>자료: 네이버 플레이스 방문자 리뷰·검색 (2026-10-26 수집), 건강보험심사평가원 분만가능 의료기관 목록(2026.4.30 기준, 공공데이터포털), 보건복지부 2025년 하반기 산후조리원 현황(2025.12.31 기준)(보건복지부 홈페이지 > 정보 > 현황). 지도: © OpenStreetMap 기여자. 후기 인용은 짧게 줄였고 원문은 네이버에서 볼 수 있어요.</footer>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
@@ -365,7 +353,7 @@ html{scroll-behavior:smooth}
   links.forEach(function(a,i){a.classList.toggle("on",i===k)});if(k>=0){var u=links[k].parentNode.parentNode;u.scrollLeft=links[k].parentNode.offsetLeft-16}}
  window.addEventListener("scroll",mark,{passive:true});mark();
 })();
-var P=[{"id": "1276739692", "rank": 1, "name": "모태산후조리원", "x": 127.3773605, "y": 36.3503812, "total": 8.9, "attached": true}, {"id": "1788970414", "rank": 2, "name": "미즈제일산후조리원", "x": 127.3440862, "y": 36.35254, "total": 8.7, "attached": true}, {"id": "183856246", "rank": 3, "name": "서울여성병원제1산후조리원", "x": 127.3806916, "y": 36.3453878, "total": 8.3, "attached": true}, {"id": "15963554", "rank": 4, "name": "가오플러스산후조리원", "x": 127.4560428, "y": 36.3066711, "total": 8.2, "attached": true}, {"id": "1026717335", "rank": 5, "name": "미즈여성병원부설산후조리원", "x": 127.3854684, "y": 36.3432926, "total": 8.1, "attached": true}, {"id": "1818261448", "rank": 6, "name": "더블유산후조리원", "x": 127.3840565, "y": 36.3437038, "total": 7.8, "attached": true}, {"id": "33082738", "rank": 7, "name": "라온산후조리원", "x": 127.4356227, "y": 36.3500205, "total": 7.8, "attached": false}, {"id": "38729746", "rank": 8, "name": "서울여성병원제2산후조리원", "x": 127.3806307, "y": 36.3459734, "total": 7.7, "attached": false}, {"id": "16144214", "rank": 9, "name": "아랫목산후조리원", "x": 127.3852826, "y": 36.3435337, "total": 7.3, "attached": false}, {"id": "33633784", "rank": 10, "name": "세란산후조리원", "x": 127.3889767, "y": 36.3464399, "total": 5.9, "attached": false}],H=[{"name": "유성선병원", "x": 127.3249507, "y": 36.3751715, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/12911002/home"}, {"name": "미즈제일여성병원", "x": 127.3442402, "y": 36.3525085, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/1244956324/home"}, {"name": "대전을지대학교병원", "x": 127.3821693, "y": 36.3553728, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686917/home"}, {"name": "건양대학교병원", "x": 127.342613, "y": 36.3066419, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/12131104/home"}, {"name": "미즈여성병원", "x": 127.3853621, "y": 36.3433459, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11601988/home"}, {"name": "더블유여성병원", "x": 127.3839428, "y": 36.3435824, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/31267505/home"}, {"name": "서울여성병원", "x": 127.3805979, "y": 36.3454381, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11482617/home"}, {"name": "예담산부인과의원", "x": 127.3343934, "y": 36.3038833, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11868833/home"}, {"name": "모태산부인과의원", "x": 127.3774436, "y": 36.3503436, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11559838/home"}, {"name": "대전한국병원", "x": 127.4358122, "y": 36.3481706, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11480812/home"}, {"name": "가오플러스산부인과의원", "x": 127.4559834, "y": 36.3065871, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11886847/home"}, {"name": "라온산부인과의원", "x": 127.4358549, "y": 36.3492474, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/33331633/home"}, {"name": "충남대학교병원", "x": 127.415363, "y": 36.316908, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/11559175/home"}, {"name": "가톨릭대학교 대전성모병원", "x": 127.4201629, "y": 36.323042, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686910/home"}, {"name": "대전선병원", "x": 127.4104138, "y": 36.3360668, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11559131/home"}],HOME={"x": 127.383844, "y": 36.355504};
+var P=[{"id": "1276739692", "rank": 1, "name": "모태산후조리원", "x": 127.3773605, "y": 36.3503812, "total": 9.0, "attached": true}, {"id": "1788970414", "rank": 2, "name": "미즈제일산후조리원", "x": 127.3440862, "y": 36.35254, "total": 8.9, "attached": true}, {"id": "15963554", "rank": 3, "name": "가오플러스산후조리원", "x": 127.4560428, "y": 36.3066711, "total": 8.6, "attached": true}, {"id": "1026717335", "rank": 4, "name": "미즈여성병원부설산후조리원", "x": 127.3854684, "y": 36.3432926, "total": 8.2, "attached": true}, {"id": "33082738", "rank": 5, "name": "라온산후조리원", "x": 127.4356227, "y": 36.3500205, "total": 7.9, "attached": false}, {"id": "183856246", "rank": 6, "name": "서울여성병원제1산후조리원", "x": 127.3806916, "y": 36.3453878, "total": 7.6, "attached": true}, {"id": "1818261448", "rank": 7, "name": "더블유산후조리원", "x": 127.3840565, "y": 36.3437038, "total": 7.4, "attached": true}, {"id": "38729746", "rank": 8, "name": "서울여성병원제2산후조리원", "x": 127.3806307, "y": 36.3459734, "total": 6.8, "attached": false}, {"id": "m예담산후조리원", "rank": 9, "name": "예담산후조리원", "x": 127.3343934, "y": 36.3038833, "total": 7.7, "attached": true}],H=[{"name": "유성선병원", "x": 127.3249507, "y": 36.3751715, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/12911002/home"}, {"name": "미즈제일여성병원", "x": 127.3442402, "y": 36.3525085, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/1244956324/home"}, {"name": "대전을지대학교병원", "x": 127.3821693, "y": 36.3553728, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686917/home"}, {"name": "건양대학교병원", "x": 127.342613, "y": 36.3066419, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/12131104/home"}, {"name": "미즈여성병원", "x": 127.3853621, "y": 36.3433459, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11601988/home"}, {"name": "더블유여성병원", "x": 127.3839428, "y": 36.3435824, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/31267505/home"}, {"name": "서울여성병원", "x": 127.3805979, "y": 36.3454381, "type": "병원", "night": true, "url": "https://m.place.naver.com/place/11482617/home"}, {"name": "예담산부인과의원", "x": 127.3343934, "y": 36.3038833, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11868833/home"}, {"name": "모태산부인과의원", "x": 127.3774436, "y": 36.3503436, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11559838/home"}, {"name": "대전한국병원", "x": 127.4358122, "y": 36.3481706, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11480812/home"}, {"name": "가오플러스산부인과의원", "x": 127.4559834, "y": 36.3065871, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/11886847/home"}, {"name": "라온산부인과의원", "x": 127.4358549, "y": 36.3492474, "type": "의원", "night": true, "url": "https://m.place.naver.com/place/33331633/home"}, {"name": "충남대학교병원", "x": 127.415363, "y": 36.316908, "type": "상급종합병원", "night": true, "url": "https://m.place.naver.com/place/11559175/home"}, {"name": "가톨릭대학교 대전성모병원", "x": 127.4201629, "y": 36.323042, "type": "종합병원", "night": true, "url": "https://m.place.naver.com/place/11686910/home"}, {"name": "대전선병원", "x": 127.4104138, "y": 36.3360668, "type": "종합병원", "night": false, "url": "https://m.place.naver.com/place/11559131/home"}],HOME={"x": 127.383844, "y": 36.355504};
 (function(){
  if(!window.L)return;
  var m=L.map("map",{scrollWheelZoom:false}).setView([HOME.y,HOME.x],12);
